@@ -18,4 +18,10 @@ design_skills.each do |skill|
   Skill.create :name => skill, :context => 'creative'
 end
 
-# TODO: create associations between users and skills
+# DONE: create associations between users and skills
+# Create a few proficiencies
+u = User.first
+user_skills = Skill.all.limit(3)
+user_skills.each do |skill|
+  u.skills << skill
+end
