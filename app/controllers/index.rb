@@ -56,3 +56,7 @@ post '/users' do
     erb :sign_up
   end
 end
+
+get '/users/proficiencies/edit' do
+  erb :proficiencies_edit
+end
